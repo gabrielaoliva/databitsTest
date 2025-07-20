@@ -15,25 +15,7 @@ export default function LoginPage() {
   const [error, setError] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const router = useRouter()
-
-  const handleLogin = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setIsLoading(true)
-    setError("")
-
-    // Simular delay de autenticación
-    await new Promise((resolve) => setTimeout(resolve, 1000))
-
-    if (email === "123" && password === "123") {
-      localStorage.setItem("isAuthenticated", "true")
-      localStorage.setItem("username", "123")
-      router.push("/dashboard")
-    } else {
-      setError('Credenciales incorrectas. Use "123" para ambos campos.')
-    }
-
-    setIsLoading(false)
-  }
+  const { handleLogin, loading: isLoading, error } = useAuth()
 
   return (
     <div className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-cyan-200 via-sky-200 to-blue-300">
@@ -150,7 +132,7 @@ export default function LoginPage() {
           </div>
 
           {/* Form */}
-          <form onSubmit={handleLogin} className="space-y-6">
+          <form onSubmit={(e) => { e.preventDefault() handleLogin(email, password)}} className="space-y-6">
             {/* Email Field */}
             <div>
               <div className="relative">
