@@ -146,9 +146,6 @@ export default function LoginPage() {
            <div className="bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-2xl px-4 py-2 inline-flex items-center justify-center mx-auto mb-4">
             <span className="text-white font-bold text-2xl">Databits</span>
           </div>
-            <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-emerald-600 bg-clip-text text-transparent mb-2">
-              Bienvenido
-            </h1>
             <p className="text-gray-600 text-sm">Ingresa y crea equipos exitosos con el apoyo de nuestras evaluaciones especializadas</p>
           </div>
 
