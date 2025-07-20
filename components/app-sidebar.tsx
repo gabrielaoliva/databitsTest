@@ -87,9 +87,8 @@ export function AppSidebar() {
           </div>
           <div className="flex flex-col">
             <span className="font-bold text-lg bg-gradient-to-r from-cyan-600 to-emerald-600 bg-clip-text text-transparent">
-              Dashboard
+              Databits
             </span>
-            <span className="text-xs text-gray-500">Panel de Control</span>
           </div>
         </div>
       </SidebarHeader>

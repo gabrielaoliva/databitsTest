@@ -144,12 +144,12 @@ export default function LoginPage() {
           {/* Header */}
           <div className="text-center mb-8">
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-emerald-500 rounded-2xl flex items-center justify-center mx-auto mb-4">
-              <span className="text-white font-bold text-2xl">D</span>
+              <span className="text-white font-bold text-2xl">Databits</span>
             </div>
             <h1 className="text-3xl font-bold bg-gradient-to-r from-cyan-600 to-emerald-600 bg-clip-text text-transparent mb-2">
               Bienvenido
             </h1>
-            <p className="text-gray-600 text-sm">Accede a tu panel de control</p>
+            <p className="text-gray-600 text-sm">Ingresa y crea equipos exitosos con el apoyo de nuestras evaluaciones especializadas</p>
           </div>
 
           {/* Form */}
@@ -207,16 +207,6 @@ export default function LoginPage() {
               </button>
             </div>
           </form>
-
-          {/* Demo Credentials */}
-          <div className="mt-8 p-4 bg-gradient-to-r from-cyan-50 to-emerald-50 rounded-xl border border-cyan-100">
-            <p className="text-sm text-gray-700 text-center">
-              <strong className="text-cyan-700">Credenciales de prueba:</strong>
-              <br />
-              <span className="font-mono bg-white px-2 py-1 rounded text-cyan-800">Email/Usuario: 123</span> |{" "}
-              <span className="font-mono bg-white px-2 py-1 rounded text-cyan-800">Contraseña: 123</span>
-            </p>
-          </div>
         </div>
       </div>
     </div>
