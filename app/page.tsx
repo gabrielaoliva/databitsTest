@@ -131,7 +131,10 @@ export default function LoginPage() {
           </div>
 
           {/* Form */}
-          <form onSubmit={(e) => { e.preventDefault() handleLogin(email, password)}} className="space-y-6">
+          <form onSubmit={(e) => { 
+              e.preventDefault(); 
+              handleLogin(email, password); 
+            }} className="space-y-6">
             {/* Email Field */}
             <div>
               <div className="relative">
