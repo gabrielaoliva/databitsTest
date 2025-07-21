@@ -8,14 +8,18 @@ const ORIGIN = process.env.NEXT_PUBLIC_ORIGIN
 export const login = async (username: string, password: string) => {
   try {
     const response = await axios.post(`${AUTH_URL}/oauth/token`, {
-      origin: ORIGIN,
-      data: { username, password }
-    }, {
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept-Language': 'es-ES'
-      }
-    })
+    origin: ORIGIN,
+    request: {
+      username,
+      password
+    }
+  }, {
+    headers: {
+      'Content-Type': 'application/json',
+      'Accept-Language': 'es-ES'
+    }
+  })
+
 
     const { result } = response.data
 

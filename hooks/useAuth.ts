@@ -22,11 +22,13 @@ export const useAuth = () => {
 
         // Aquí puedes definir las rutas según rol como en Angular
         const roleRouteMap: Record<string, string> = {
-          'ROLE_ADMIN': '/admin',
+          'ROLE_ADMIN': '/dashboard',
           'ROLE_USER': '/dashboard'
         }
 
-        router.push(roleRouteMap[role] || '/dashboard')
+        //router.push(roleRouteMap[role] || '/dashboard')
+        const destination = roleRouteMap[role] || '/dashboard'
+        window.location.href = destination // <- redirección completa
       } else {
         setError('Roles inválidos o no autorizados.')
       }
